@@ -1,0 +1,79 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Exposure audit</title><style>
+:root{--bg:#fafaf9;--fg:#1c1917;--muted:#57534e;--card:#fff;--line:#e7e5e4;
+--high:#b91c1c;--med:#c2410c;--low:#a16207;--info:#57534e;--link:#1d4ed8}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1917;--fg:#f5f5f4;--muted:#a8a29e;--card:#292524;
+--line:#44403c;--high:#f87171;--med:#fb923c;--low:#facc15;--info:#a8a29e;--link:#93c5fd}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);
+font:15px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:860px;margin:0 auto;padding:32px 16px 64px}
+h1{margin:0 0 4px;font-size:28px}h2{margin:40px 0 12px;font-size:19px}
+.muted{color:var(--muted)}a{color:var(--link)}
+.score{display:flex;gap:16px;flex-wrap:wrap;margin:20px 0}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;min-width:110px}
+.tile b{display:block;font-size:26px}
+.f{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--info);
+border-radius:8px;padding:12px 16px;margin:10px 0}
+.f.high{border-left-color:var(--high)}.f.medium{border-left-color:var(--med)}.f.low{border-left-color:var(--low)}
+.tag{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.high .tag{color:var(--high)}.medium .tag{color:var(--med)}.low .tag{color:var(--low)}.info .tag{color:var(--info)}
+.fix{margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+code{font-size:13px;overflow-wrap:anywhere}ul{padding-left:20px}li{margin:3px 0}
+</style></head><body><main>
+<h1>Exposure audit report</h1>
+<p class=muted>Generated 2026-11-22 00:47 UTC. This report contains your personal data; store it carefully.</p>
+<div class=score>
+<div class=tile><b>19</b><span class=muted>score / 100</span></div>
+<div class=tile><b>1</b><span class=muted>high</span></div>
+<div class=tile><b>2</b><span class=muted>medium</span></div>
+<div class=tile><b>1</b><span class=muted>low</span></div></div>
+<p><b>Audited (verified):</b> <code>jane.doe88@example.com</code>, <code>+12015550123</code>, <code>janedoe88</code></p>
+<h2>How your identifiers link together</h2><p class=muted>Each line is a hop someone could make starting from what you posted.</p><ul>
+<li><code>jane.doe88@example.com</code> → <code>gravatar:4f2a9c1b0e…</code> <span class=muted>via email hash</span></li>
+<li><code>jane.doe88@example.com</code> → <code>janedoe88</code> <span class=muted>via gravatar profile</span></li>
+<li><code>janedoe88</code> → <code>GitHub:janedoe88</code> <span class=muted>via same username</span></li>
+<li><code>janedoe88</code> → <code>Reddit:janedoe88</code> <span class=muted>via same username</span></li>
+<li><code>janedoe88</code> → <code>Steam:janedoe88</code> <span class=muted>via same username</span></li>
+<li><code>janedoe88</code> → <code>Linktree:janedoe88</code> <span class=muted>via same username</span></li>
+</ul>
+<h2>Findings</h2>
+<div class='f high'><span class=tag>HIGH</span> <b>Exposed in the ExampleForum breach (2019-04-02)</b><div class=muted>breaches · <code>jane.doe88@example.com</code></div>
+<div>Leaked data: Email addresses, Passwords, Usernames</div>
+<div class=fix><b>Fix:</b> Change the password on this site and anywhere you reused it; turn on 2FA.</div>
+</div>
+<div class='f medium'><span class=tag>MEDIUM</span> <b>Public Gravatar profile is tied to this email</b><div class=muted>gravatar · <code>jane.doe88@example.com</code></div>
+<div>Anyone with your email can fetch this. It reveals: display name: Jane D; location: Springfield; plus 2 linked account(s)</div>
+<div class=fix><b>Fix:</b> Edit or hide fields at gravatar.com, or delete the profile.</div>
+</div>
+<div class='f medium'><span class=tag>MEDIUM</span> <b>&#x27;janedoe88&#x27; is in use on 4 of 25 sites checked</b><div class=muted>usernames · <code>janedoe88</code></div>
+<div>Accounts found (not all may be yours; check each): GitHub, Reddit, Steam, Linktree.</div>
+<ul><li>GitHub: <a href='https://github.com/janedoe88' rel=noopener>https://github.com/janedoe88</a></li><li>Reddit: <a href='https://www.reddit.com/user/janedoe88' rel=noopener>https://www.reddit.com/user/janedoe88</a></li></ul>
+<div class=fix><b>Fix:</b> Use different handles for different parts of your life.</div>
+</div>
+<div class='f low'><span class=tag>LOW</span> <b>What the number reveals by itself</b><div class=muted>phone · <code>+12015550123</code></div>
+<div>Region: New Jersey; original carrier: unknown carrier; line type: landline or mobile; time zone(s): America/New_York. This is from public numbering-plan data, so anyone can get it; carrier may be out of date if the number was ported.</div>
+<div class=fix><b>Fix:</b> If you post a number publicly, consider a forwarding/VoIP number (e.g. Google Voice) instead of your real mobile, which is often the key people-search sites use to join records.</div>
+</div>
+<h2>Search it yourself</h2>
+<p><b><code>jane.doe88@example.com</code></b></p><ul>
+<li>Exact matches anywhere: <a href='https://www.google.com/search?q=%22jane.doe88%40example.com%22' rel=noopener>Google</a> · <a href='https://www.bing.com/search?q=%22jane.doe88%40example.com%22' rel=noopener>Bing</a> · <a href='https://duckduckgo.com/?q=%22jane.doe88%40example.com%22' rel=noopener>DuckDuckGo</a></li>
+<li>Paste / code / board sites: <a href='https://www.google.com/search?q=%28%22jane.doe88%40example.com%22%29+%28site%3Apastebin.com+OR+site%3Agithub.com+OR+site%3Agist.github.com+OR+site%3Atrello.com%29' rel=noopener>Google</a> · <a href='https://www.bing.com/search?q=%28%22jane.doe88%40example.com%22%29+%28site%3Apastebin.com+OR+site%3Agithub.com+OR+site%3Agist.github.com+OR+site%3Atrello.com%29' rel=noopener>Bing</a> · <a href='https://duckduckgo.com/?q=%28%22jane.doe88%40example.com%22%29+%28site%3Apastebin.com+OR+site%3Agithub.com+OR+site%3Agist.github.com+OR+site%3Atrello.com%29' rel=noopener>DuckDuckGo</a></li>
+<li>Documents (resumes, rosters, spreadsheets): <a href='https://www.google.com/search?q=%28%22jane.doe88%40example.com%22%29+%28filetype%3Apdf+OR+filetype%3Adoc+OR+filetype%3Adocx+OR+filetype%3Axls+OR+filetype%3Axlsx+OR+filetype%3Acsv%29' rel=noopener>Google</a> · <a href='https://www.bing.com/search?q=%28%22jane.doe88%40example.com%22%29+%28filetype%3Apdf+OR+filetype%3Adoc+OR+filetype%3Adocx+OR+filetype%3Axls+OR+filetype%3Axlsx+OR+filetype%3Acsv%29' rel=noopener>Bing</a> · <a href='https://duckduckgo.com/?q=%28%22jane.doe88%40example.com%22%29+%28filetype%3Apdf+OR+filetype%3Adoc+OR+filetype%3Adocx+OR+filetype%3Axls+OR+filetype%3Axlsx+OR+filetype%3Acsv%29' rel=noopener>DuckDuckGo</a></li>
+<li>Username part of the email: <a href='https://www.google.com/search?q=%22jane.doe88%22+-%22example.com%22' rel=noopener>Google</a> · <a href='https://www.bing.com/search?q=%22jane.doe88%22+-%22example.com%22' rel=noopener>Bing</a> · <a href='https://duckduckgo.com/?q=%22jane.doe88%22+-%22example.com%22' rel=noopener>DuckDuckGo</a></li>
+</ul>
+<h2>Data broker opt-outs</h2><p class=muted>People-search sites join records by phone, email and address. Search yourself on each, then opt out. Listings come back, so repeat every few months.</p><ul>
+<li><b>Spokeo</b>: <a href='https://www.spokeo.com/' rel=noopener>search</a> · <a href='https://www.spokeo.com/optout' rel=noopener>opt out</a></li>
+<li><b>Whitepages</b>: <a href='https://www.whitepages.com/' rel=noopener>search</a> · <a href='https://www.whitepages.com/suppression-requests' rel=noopener>opt out</a></li>
+<li><b>BeenVerified</b>: <a href='https://www.beenverified.com/' rel=noopener>search</a> · <a href='https://www.beenverified.com/app/optout/search' rel=noopener>opt out</a></li>
+<li><b>TruePeopleSearch</b>: <a href='https://www.truepeoplesearch.com/' rel=noopener>search</a> · <a href='https://www.truepeoplesearch.com/removal' rel=noopener>opt out</a></li>
+<li><b>FastPeopleSearch</b>: <a href='https://www.fastpeoplesearch.com/' rel=noopener>search</a> · <a href='https://www.fastpeoplesearch.com/removal' rel=noopener>opt out</a></li>
+<li><b>PeopleFinders</b>: <a href='https://www.peoplefinders.com/' rel=noopener>search</a> · <a href='https://www.peoplefinders.com/opt-out' rel=noopener>opt out</a></li>
+<li><b>Intelius / PeopleConnect (also Instant Checkmate, TruthFinder, US Search)</b>: <a href='https://www.intelius.com/' rel=noopener>search</a> · <a href='https://suppression.peopleconnect.us/login' rel=noopener>opt out</a></li>
+<li><b>Radaris</b>: <a href='https://radaris.com/' rel=noopener>search</a> · <a href='https://radaris.com/control/privacy' rel=noopener>opt out</a></li>
+<li><b>MyLife</b>: <a href='https://www.mylife.com/' rel=noopener>search</a> · <a href='https://www.mylife.com/ccpa/index.pubview' rel=noopener>opt out</a></li>
+<li><b>USPhoneBook</b>: <a href='https://www.usphonebook.com/' rel=noopener>search</a> · <a href='https://www.usphonebook.com/opt-out' rel=noopener>opt out</a></li>
+<li><b>ThatsThem</b>: <a href='https://thatsthem.com/' rel=noopener>search</a> · <a href='https://thatsthem.com/optout' rel=noopener>opt out</a></li>
+<li><b>Nuwber</b>: <a href='https://nuwber.com/' rel=noopener>search</a> · <a href='https://nuwber.com/removal/link' rel=noopener>opt out</a></li>
+<li><b>PeekYou</b>: <a href='https://www.peekyou.com/' rel=noopener>search</a> · <a href='https://www.peekyou.com/about/contact/optout/' rel=noopener>opt out</a></li>
+<li><b>Google &#x27;Results about you&#x27;</b>: <a href='https://www.google.com/' rel=noopener>search</a> · <a href='https://myactivity.google.com/results-about-you' rel=noopener>opt out</a></li>
+</ul>
+</main></body></html>

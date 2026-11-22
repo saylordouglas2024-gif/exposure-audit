@@ -1,0 +1,16 @@
+[
+  {"name": "Spokeo", "optout": "https://www.spokeo.com/optout", "search": "https://www.spokeo.com/"},
+  {"name": "Whitepages", "optout": "https://www.whitepages.com/suppression-requests", "search": "https://www.whitepages.com/"},
+  {"name": "BeenVerified", "optout": "https://www.beenverified.com/app/optout/search", "search": "https://www.beenverified.com/"},
+  {"name": "TruePeopleSearch", "optout": "https://www.truepeoplesearch.com/removal", "search": "https://www.truepeoplesearch.com/"},
+  {"name": "FastPeopleSearch", "optout": "https://www.fastpeoplesearch.com/removal", "search": "https://www.fastpeoplesearch.com/"},
+  {"name": "PeopleFinders", "optout": "https://www.peoplefinders.com/opt-out", "search": "https://www.peoplefinders.com/"},
+  {"name": "Intelius / PeopleConnect (also Instant Checkmate, TruthFinder, US Search)", "optout": "https://suppression.peopleconnect.us/login", "search": "https://www.intelius.com/"},
+  {"name": "Radaris", "optout": "https://radaris.com/control/privacy", "search": "https://radaris.com/"},
+  {"name": "MyLife", "optout": "https://www.mylife.com/ccpa/index.pubview", "search": "https://www.mylife.com/"},
+  {"name": "USPhoneBook", "optout": "https://www.usphonebook.com/opt-out", "search": "https://www.usphonebook.com/"},
+  {"name": "ThatsThem", "optout": "https://thatsthem.com/optout", "search": "https://thatsthem.com/"},
+  {"name": "Nuwber", "optout": "https://nuwber.com/removal/link", "search": "https://nuwber.com/"},
+  {"name": "PeekYou", "optout": "https://www.peekyou.com/about/contact/optout/", "search": "https://www.peekyou.com/"},
+  {"name": "Google 'Results about you'", "optout": "https://myactivity.google.com/results-about-you", "search": "https://www.google.com/"}
+]
